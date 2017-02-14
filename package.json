@@ -5,15 +5,18 @@
   "main": "index.js",
   "devDependencies": {
     "async": "^2.1.4",
-    "chai": "^3.5.0",
-    "eslint": "^3.2.2",
-    "eslint-config-airbnb-base": "^5.0.1",
-    "eslint-plugin-import": "^1.12.0",
+    "chai": "3.4.1",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
     "istanbul": "^0.4.4",
     "mocha": "^3.0.2",
-    "mockgoose": "^6.0.6",
-    "nock": "^8.0.0",
-    "sinon": "^1.17.5"
+    "mock-dgram": "0.1.2",
+    "mockgoose": "^6.0.8",
+    "mongo-mock": "2.0.1",
+    "sinon": "^1.17.7"
   },
   "scripts": {
     "test": "node_modules/istanbul/lib/cli.js cover -x \"specs/*\" --report lcov --dir specs/coverage node_modules/mocha/bin/_mocha -- -R spec specs/index.spec.js"
