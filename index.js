@@ -15,11 +15,10 @@ const os = require('os');
 const uuid = require('uuid-1345');
 const plist = require('plist-native');
 
-const profile = plist.parse(fs.readFileSync('examples/empty.mobileconfig'));
-console.log(profile); /* eslint no-console: 0 */
+// const profile = plist.parse(fs.readFileSync('examples/empty.mobileconfig'));
+// console.log(profile); /* eslint no-console: 0 */
 
 module.exports = function setup(options, imports, register) {
-
   /**
    * A configuration profile is an XML file that allows you to distribute configuration
    * information. If you need to configure a large number of devices or to provide lots of custom
@@ -140,19 +139,19 @@ module.exports = function setup(options, imports, register) {
 
     switch (data.EmailAccountType) {
       case 'EmailTypeIMAP': {
-        const x = {
-          // payload.EmailAccountType: 'EmailTypeIMAP',
-          // IncomingMailServerAuthentication: 'EmailAuthPassword',
-          // IncomingMailServerPortNumber: 993,
-          // IncomingMailServerUseSSL: true,
-          // OutgoingMailServerAuthentication: 'EmailAuthPassword',
-          // OutgoingMailServerPortNumber: 587,
-          // OutgoingMailServerUseSSL: true,
-          // OutgoingPasswordSameAsIncomingPassword: false,
-          // SMIMEEnablePerMessageSwitch: false,
-          // allowMailDrop: false,
-          // disableMailRecentsSyncing: false
-        };
+        // const x = {
+        //   // payload.EmailAccountType: 'EmailTypeIMAP',
+        //   // IncomingMailServerAuthentication: 'EmailAuthPassword',
+        //   // IncomingMailServerPortNumber: 993,
+        //   // IncomingMailServerUseSSL: true,
+        //   // OutgoingMailServerAuthentication: 'EmailAuthPassword',
+        //   // OutgoingMailServerPortNumber: 587,
+        //   // OutgoingMailServerUseSSL: true,
+        //   // OutgoingPasswordSameAsIncomingPassword: false,
+        //   // SMIMEEnablePerMessageSwitch: false,
+        //   // allowMailDrop: false,
+        //   // disableMailRecentsSyncing: false
+        // };
         break;
       }
 
@@ -211,7 +210,6 @@ module.exports = function setup(options, imports, register) {
       }
 
       case 'None': {
-        // AutoJoin
         break;
       }
 

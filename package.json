@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
+    "async": "^2.1.4",
     "chai": "^3.5.0",
     "eslint": "^3.2.2",
     "eslint-config-airbnb-base": "^5.0.1",
@@ -15,14 +16,12 @@
     "sinon": "^1.17.5"
   },
   "scripts": {
-    "lint": "node_modules/eslint/bin/eslint.js --quiet -c .eslintrc index.js",
-    "test": "node_modules/mocha/bin/mocha specs/index.spec.js",
-    "coverage": "node_modules/istanbul/lib/cli.js cover -x \"**/models/**\" -x \"**/specs/**\" --dir ./specs/coverage --report html node_modules/mocha/bin/_mocha -- -R spec specs/index.spec.js"
+    "test": "node_modules/istanbul/lib/cli.js cover -x \"specs/*\" --report lcov --dir specs/coverage node_modules/mocha/bin/_mocha -- -R spec specs/index.spec.js"
   },
   "author": "Egor Zaitsev <ezaitsev@briskhome.com>",
   "license": "MIT",
   "dependencies": {
-    "plist-native": "^0.4.2",
+    "plist-native": "heuels/node-plist-native",
     "uuid-1345": "^0.99.6"
   }
 }
